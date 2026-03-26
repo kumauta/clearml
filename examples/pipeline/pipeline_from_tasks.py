@@ -33,7 +33,7 @@ pipe.add_parameter(
     "dataset_url",
 )
 
-pipe.set_default_execution_queue("default")
+pipe.set_default_execution_queue("3g3t-a-gpu1")
 
 pipe.add_step(
     name="stage_data",
@@ -66,6 +66,6 @@ pipe.add_step(
 # pipe.start_locally()
 
 # Starting the pipeline (in the background)
-pipe.start()
+pipe.start("3g3t-a-gpu2")
 
 print("done")
