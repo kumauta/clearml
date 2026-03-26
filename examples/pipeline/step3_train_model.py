@@ -27,7 +27,7 @@ y_train = dataset_task.artifacts['y_train'].get()
 y_test = dataset_task.artifacts['y_test'].get()
 print('Iris dataset loaded')
 
-model = LogisticRegression(solver='liblinear')
+model = LogisticRegression(solver='lbfgs', max_iter=200)
 model.fit(X_train, y_train)
 
 joblib.dump(model, 'model.pkl', compress=True)
